@@ -37,7 +37,7 @@
       $statement->execute(["%$bookIsbn]%"]);
       break;
     default:
-      $myFirstRequest = "SELECT * FROM `books`";
+      $myFirstRequest = "SELECT * FROM `books` ORDER BY `year` DESC";
       $statement = $connect->prepare($myFirstRequest);
       $statement->execute();
   }
